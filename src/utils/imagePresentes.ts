@@ -7,6 +7,7 @@ import img6 from "@/assets/img/6.jpg";
 import img7 from "@/assets/img/7.jpg";
 import img8 from "@/assets/img/8.jpg";
 import img9 from "@/assets/img/9.jpg";
+import img10 from "@/assets/img/10.jpg";
 
 export default {
   img1,
@@ -18,4 +19,5 @@ export default {
   img7,
   img8,
   img9,
+  img10,
 };
