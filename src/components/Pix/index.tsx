@@ -27,10 +27,15 @@ interface PixProps {
 
 export default function Pix({ title, price }: PixProps) {
   const quantityChars = price.toFixed(2).toString().length;
+  let payloadSemCRC = "";
 
-  const payloadSemCRC = `00020126330014br.gov.bcb.pix011100842768270520400005303986540${quantityChars}${price.toFixed(
-    2
-  )}5802BR5925ENNOILE RAQUEL MARTINS FE6009Sao Paulo62290525REC691B2B2F5D8892559971546304`;
+  if (price)
+    payloadSemCRC = `00020126330014br.gov.bcb.pix011100842768270520400005303986540${quantityChars}${price.toFixed(
+      2
+    )}5802BR5925ENNOILE RAQUEL MARTINS FE6009Sao Paulo62290525REC691B2B2F5D8892559971546304`;
+  else
+    payloadSemCRC =
+      "00020126330014br.gov.bcb.pix0111008427682705204000053039865802BR5925ENNOILE RAQUEL MARTINS FE6009Sao Paulo62290525REC691B2B1B998553554779686304";
 
   const payload = payloadSemCRC + crc16(payloadSemCRC);
 
@@ -44,8 +49,16 @@ export default function Pix({ title, price }: PixProps) {
 
   return (
     <div className="flex flex-col items-center gap-3">
-      <h1 className="text-4xl font-serif text-[#6B7A5E] font-semibold">{title}</h1>
-      <p className="text-xl text-[#6B7A5E] font-serif">Valor: R$ {price.toFixed(2)}</p>
+      <h1 className="text-4xl font-serif text-[#6B7A5E] font-semibold">
+        {title}
+      </h1>
+      {typeof price === "number" && !isNaN(price) && (
+        <>
+          <p className="text-xl text-[#6B7A5E] font-serif">
+            Valor: R$ {price.toFixed(2)}
+          </p>
+        </>
+      )}
       <div className="p-4 rounded-xl shadow-md border border-[#D7D9CC] bg-[#F8F9F4]">
         <QRCodeSVG value={payload} size={230} className="rounded-lg" />
       </div>

@@ -9,7 +9,7 @@ export const presentes = {
   },
   2: {
     title:
-    "Kit 'Aguenta firme, noiva', quando o orçamento do casamento te derruba",
+      "Kit 'Aguenta firme, noiva', quando o orçamento do casamento te derruba",
     price: "R$ 70,00",
     image: images.img2,
   },
@@ -52,5 +52,10 @@ export const presentes = {
     title: "Kit 'RESPIRA'!!! Pq o casamento tá chegando",
     price: "R$ 80,00",
     image: images.img10,
+  },
+  11: {
+    title: "Contribuição livre para os noivos",
+    price: "Valor à sua escolha",
+    image: images.qr,
   },
 };
