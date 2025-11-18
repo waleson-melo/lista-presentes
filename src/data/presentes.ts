@@ -2,21 +2,21 @@ import images from "@/utils/imagePresentes";
 
 export const presentes = {
   1: {
-    title: "Vaquinha pro noivo aposentar as meias antes do 'SIM'",
-    price: "R$ 40,00",
-    image: images.img1,
+    title:
+      "Pra noiva manter o charme mesmo estressada: 'Oculos, Pose e um Suquinho!'",
+    price: "R$ 100,00",
+    image: images.img3,
   },
   2: {
     title:
-      "Kit 'Aguenta firme, noiva', quando o orçamento do casamento te derruba",
+    "Kit 'Aguenta firme, noiva', quando o orçamento do casamento te derruba",
     price: "R$ 70,00",
     image: images.img2,
   },
   3: {
-    title:
-      "Pra noiva manter o charme mesmo estressada: Oculos, Pose e um Suquinho",
-    price: "R$ 100,00",
-    image: images.img3,
+    title: "Vaquinha pro noivo aposentar as meias antes do 'SIM'",
+    price: "R$ 40,00",
+    image: images.img1,
   },
   4: {
     title: "Pra nossa viagem ter fotos tão boas quanto desses doguinhos",
